@@ -8,6 +8,7 @@ require("express-async-errors")
 const routerAPI = require("./routers/objects")
 
 app.use(express.json())
+app.use("./public")
 app.use("/api/v1/objects",routerAPI)
 app.use(notFound)
 app.use(errorHandler)
